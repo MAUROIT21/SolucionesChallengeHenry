@@ -22,6 +22,16 @@ function ingredienteEnMalEstado(menu, comida, ingrediente) {
   // NOTA: No utilizar el método "includes".
   //
   // Tu código:
+  var indiceIngrediente = menu[comida].indexOf(ingrediente);
+  var arrIngredientes = menu[comida];
+  var enMalEstado = [];
+
+  if (menu[comida][indiceIngrediente]) {
+      enMalEstado.push(menu[comida][indiceIngrediente-1], menu[comida][indiceIngrediente], menu[comida][indiceIngrediente+1])
+      return enMalEstado;    
+  
+  } else {return 'El menú está perfecto'};
+
 
 };
 

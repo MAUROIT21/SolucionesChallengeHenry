@@ -11,7 +11,13 @@ function intercambio(objeto) {
   // NOTA: No utilizar métodos de Object (values, keys, entries);
   //
   // Tu código:
+  let newObj = {};
 
+  for (const property in objeto) {
+// Por cada propiedad del objeto pasado, creo un nuevo par clave/valor intercambiadas
+    newObj[objeto[property]] = property;
+}
+return newObj;
 };
 
 // No modifiques nada debajo de esta linea //

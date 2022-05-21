@@ -23,6 +23,11 @@ function bienvenidoSr(persona) {
   //
   // Tu código:
 
+  if (persona.invitado && persona.nombre && persona.apellido) {return persona.nombre + ' ' + persona.apellido + ', un gusto tenerlo nuevamente! Bienvenido'};
+  if (persona.invitado && persona.apellido) {return 'Bienvenido Sr. ' + persona.apellido};
+  if (persona.invitado && persona.nombre) {return 'Hola ' + persona.nombre + ', tu mesa está lista'};
+  if (!persona.invitado) {return 'Disculpe señor, no está invitado a la fiesta'};
+
 };
 
 // No modifiques nada debajo de esta linea //
